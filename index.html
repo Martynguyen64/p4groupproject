@@ -1,15 +1,141 @@
 ---
 layout: home
 search_exclude: true
-image: images/logo.png
+image: images/nbalogo.jpeg
 ---
 
-This site is built with [fastpages](https://github.com/fastai/fastpages), An easy to use blogging platform with extra features for Jupyter Notebooks.
+![download (3)](https://user-images.githubusercontent.com/111910633/199587728-71555f5f-9f08-447c-9806-b524cd58d961.png)
 
-![]({{site.baseurl}}/images/diagram.png "https://github.com/fastai/fastpages")
+This is the website of the NBA Group Project
 
-[fastpages](https://github.com/fastai/fastpages) automates the process of creating blog posts via GitHub Actions, so you don't have to fuss with conversion scripts.  A full list of features can be found on [GitHub](https://github.com/fastai/fastpages).  
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-You can edit the `index.html` file to change this content.
+* {
+  box-sizing: border-box;
+}
 
-# Posts
+/* Create a column layout with Flexbox */
+.row {
+  display: flex;
+}
+
+/* Left column (menu) */
+.left {
+  flex: 35%;
+  padding: 15px 0;
+}
+
+.left h2 {
+  padding-left: 8px;
+}
+
+/* Right column (page content) */
+.right {
+  flex: 65%;
+  padding: 15px;
+}
+
+/* Style the search box */
+#mySearch {
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #ddd;
+}
+
+/* Style the navigation menu inside the left column */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  background-color: #fffcc0;
+  display: block
+}
+
+#myMenu li a:hover {
+  background-color: #e3c7aa;
+}
+</style>
+</head>
+<body>
+
+<h2>Search Menu</h2>
+<p>Start to type for a specific category inside the search bar to "filter" the search options.</p>
+
+<div class="row">
+  <div class="left" style="background-color:#898989;">
+    <h2>Menu</h2>
+    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+    <ul id="myMenu">
+      <li><a href="https://thegerbil21.github.io/NBAD/hawks.html">Atlanta Hawks</a></li>
+      <li><a href="#">Boston Celtics</a></li>
+      <li><a href="#">Brooklyn Nets</a></li>
+      <li><a href="#">Charlotte Hornets</a></li>
+      <li><a href="#">Chicago Bulls</a></li>
+      <li><a href="#">Cleveland Cavaliers</a></li>
+      <li><a href="#">Dallas Mavericks</a></li>
+      <li><a href="#">Denver Nuggets</a></li>
+      <li><a href="#">Detroit Pistons</a></li>
+      <li><a href="#">Golden State Warriors</a></li>
+      <li><a href="#">Houston Rockets</a></li>
+      <li><a href="#">Indiana Pacers</a></li>
+      <li><a href="#">Los Angeles Clippers</a></li>
+      <li><a href="#">Los Angeles Lakers</a></li>
+      <li><a href="#">Memphis Grizzlies</a></li>
+      <li><a href="#">Miami Heat</a></li>
+      <li><a href="#">Milwaukee Bucks</a></li>
+      <li><a href="#">Minnesota Timberwolves</a></li>
+      <li><a href="#">New Orleans Pelicans</a></li>
+      <li><a href="#">New York Knicks</a></li>
+      <li><a href="#">Oklahoma City Thunder</a></li>
+      <li><a href="#">Orlando Magic</a></li>
+      <li><a href="#">Philadelphia 76ers</a></li>
+      <li><a href="#">Phoenix Suns</a></li>
+      <li><a href="#">Portland Trail Blazer</a></li>
+      <li><a href="#">Sacramento Kings</a></li>
+      <li><a href="#">San Antonio Spurs</a></li>
+      <li><a href="#">Toronto Raptors</a></li>
+      <li><a href="#">Utah Jazz</a></li>
+      <li><a href="#">Washington Wizards</a></li>
+    </ul>
+  </div>
+  
+  <div class="right" style="background-color:#ec6868;">
+    <h2>Search for NBA Teams!</h2>
+    <p>This search tool will allow you to search for your specific NBA team.</p>
+    <p>Simply type your favorite team in the search bar, and click on the link for your team.</p>
+    <p>The frontend will automatically take you to a page diplaying your team's major statistics!</p>
+  </div>
+</div>
+
+<script>
+function myFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+</body>
+</html>
